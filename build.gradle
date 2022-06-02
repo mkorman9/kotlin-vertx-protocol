@@ -33,6 +33,16 @@ def javaVersion = '11'
 sourceCompatibility = javaVersion
 targetCompatibility = javaVersion
 
+if (!project.hasProperty('url')) {
+    ext.url = ''
+}
+if (!project.hasProperty('username')) {
+    ext.username = ''
+}
+if (!project.hasProperty('password')) {
+    ext.password = ''
+}
+
 publishing {
     publications {
         library(MavenPublication) {
